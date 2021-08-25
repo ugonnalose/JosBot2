@@ -92,4 +92,4 @@ client.on('messageCreate', (msg) => {
 });
 
 
-client.login("ODc5ODYzODQxMDA4MjY3MjY1.YSV7Dg.RAi63-Oq4mORWZhFjEBkBENdMIk");
+client.login(process.env.BOT_TOKEN);
