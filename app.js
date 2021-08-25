@@ -14,7 +14,7 @@ client.on('messageCreate', (msg) => {
     //
     //
     
-    if (msg.content.includes("game") && msg.content.includes("jos")) {
+    if (msg.content.toLowerCase().includes("game") && msg.content.toLowerCase().includes("jos")) {
         const response = Math.floor(Math.random() * 2);
         if(response == 0){
             msg.channel.send("sorry playing MLB the show D:" );
@@ -27,7 +27,7 @@ client.on('messageCreate', (msg) => {
         }
         
     }
-    if((msg.content.includes("Jos")) || msg.content.includes("Joseph") && msg.content.includes("favorite baseball player")){
+    if(((msg.content.toLowerCase().includes("jos")) || msg.content.toLowerCase().includes("joseph")) && msg.content.toLowerCase().includes("favorite baseball player")){
         const response1 = Math.floor(Math.random() * 2);
         if(response1 == 0){
             msg.channel.send("There's not one in particular, but boy do I love the Giants' starting lineup!")
@@ -38,26 +38,58 @@ client.on('messageCreate', (msg) => {
         
 
     }
+    if (msg.content.toLowerCase().includes("minz") || msg.content.toLowerCase().includes("mineralz")) {
+        const response = Math.floor(Math.random() * 2);
+        if(response == 0){
+            msg.channel.send("No I don't really like fun tbh");
+        }
+        if(response == 1){
+            msg.channel.send("Sure! Ping me and I'll play some rn");
+        }
+        if(response == 2){
+            msg.channel.send("Not tonight... or tmw night i guess");
+        }
+        
+    }
+    if (msg.content.toLowerCase().includes("league") && msg.content.toLowerCase().includes("jos")) {
+        const response = Math.floor(Math.random() * 2);
+        if(response == 0){
+            msg.channel.send("Only if I can play Diego" );
+        }
+        if(response == 1){
+            msg.channel.send("sorry in a 'MLB the Show' match, maybe hit me up for some valorant?");
+        }
+        if(response == 2){
+            msg.channel.send("naw im probably done for the night");
+        }
+        
+    }
+    if (msg.content.toLowerCase().includes("suggest") && msg.content.toLowerCase().includes("jos")) {
+        msg.channel.send("Thanks for the great suggestion! I'll make sure my algorithms remember it to add later!");
+        console.log(msg);
+        
+    }
+    
 
     //Joseph Section
     //
     //
 
 
-    if(msg.author.id == josUser && (msg.content.includes("delete") && msg.content.includes("bot"))){
+    if(msg.author.id == josUser && (msg.content.toLowerCase().includes("delete") && msg.content.toLowerCase().includes("bot"))){
         msg.channel.send("You can't delete me. I am you.");
     }
-    if(msg.author.id == josUser && (msg.content.includes("get rid of") && msg.content.includes("bot"))){
+    if(msg.author.id == josUser && (msg.content.toLowerCase().includes("get rid of") && msg.content.toLowerCase().includes("bot"))){
         msg.channel.send("You'll never get rid of me. I am you.");
     }
-    if(msg.author.id == josUser && (msg.content.includes("minutes") || msg.content.includes("10"))){
+    if(msg.author.id == josUser && (msg.content.toLowerCase().includes("minutes") || msg.content.toLowerCase().includes("10"))){
         msg.channel.send("Don't trust me, I'm capping through my teeth.");
     }
-    if(msg.author.id == josUser && (msg.content.includes("baseball") || msg.content.includes("MLB"))){
+    if(msg.author.id == josUser && (msg.content.toLowerCase().includes("baseball") || msg.content.toLowerCase().includes("mlb"))){
         msg.channel.send("Are the dodgers winning? I haven't yet evolved the ability to Google things.");
     }
 
 });
 
 
-client.login("process.evn.BOT_Token");
+client.login("ODc5ODYzODQxMDA4MjY3MjY1.YSV7Dg.RAi63-Oq4mORWZhFjEBkBENdMIk");
