@@ -1,0 +1,12 @@
+{
+  "name": "josbot",
+  "version": "1.0.0",
+  "description": "The first JosBot, here to answer all your Joseph related questions!",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "discord.js": "13.1.0"
+  }
+}
